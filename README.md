@@ -54,6 +54,7 @@ Open a terminal window and write following commands:
 
 In our case, it is really important to use the latest version of Raspberry Pi OS ! Even if it takes some time, do not skip the next step !
 
+```
 sudo apt update
 sudo apt full-upgrade
 sudo apt install python3-pip
@@ -64,24 +65,24 @@ Then install and run a script developed by Adafruit :
 sudo pip3 install --upgrade adafruit-python-shell
 wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
 sudo python3 raspi-blinka.py
+```
 The script will probably ask you to update your python version to Version 3. Choose : y
  
  
  Install the CircuitPython-DHT Library
 Open a terminal window and write following commands:
-
+```
 pip3 install adafruit-circuitpython-dht
 sudo apt-get install libgpiod2
+```
 
 
 open thonny python and writhe the python script as shown below 
 
 
-### PYTHON SCRIPT 
+### PYTHON SCRIPT :
  
-`
-
-
+```
 import time
 import board
 import adafruit_dht
@@ -103,18 +104,16 @@ while True:
     except Exception as error:
         sensor.exit()
         raise error
-    time.sleep(2.0)`
-
-
-
-
-
+    time.sleep(2.0)
+```
 
 ## SCREENSHOT OF THE OUTPUT AND CIRCUIT :
 1.CIRCUIT DIAGRAM OR CONNECTION:
-![Screenshot 2025-05-08 110723](https://github.com/user-attachments/assets/83816e42-d8fb-4fc7-b239-526b7812eae0)
+
+  ![Screenshot 2025-05-08 110723](https://github.com/user-attachments/assets/83816e42-d8fb-4fc7-b239-526b7812eae0)
 
  2. SENSOR READING:
-![Screenshot 2025-05-08 110733](https://github.com/user-attachments/assets/75c370fb-ad7c-431d-b811-a9b9e35a70fd)
+    
+  ![Screenshot 2025-05-08 110733](https://github.com/user-attachments/assets/75c370fb-ad7c-431d-b811-a9b9e35a70fd)
 ## RESULT:
 The DHT11 temperature and humidity sensor was successfully interfaced with the Raspberry Pi, and real-time data was retrieved and displayed.
